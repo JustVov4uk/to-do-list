@@ -9,5 +9,5 @@ def index(request: HttpRequest) -> HttpResponse:
 
     context = {"num_tasks": num_tasks}
 
-    return render(request, "config/index.html")
+    return render(request, "index.html", context=context)
 
