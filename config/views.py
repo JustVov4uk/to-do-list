@@ -1,7 +1,8 @@
 from django.http import HttpRequest, HttpResponse
 from django.shortcuts import render
+from django.views import generic
 
-from config.models import Task
+from config.models import Task, Tag
 
 
 def index(request: HttpRequest) -> HttpResponse:
@@ -10,3 +11,10 @@ def index(request: HttpRequest) -> HttpResponse:
     context = {"num_tasks": num_tasks}
     return render(request, "config/index.html", context=context)
 
+
+class TaskListView(generic.ListView):
+    model = Task
+
+
+class TagListView(generic.ListView):
+    model = Tag
