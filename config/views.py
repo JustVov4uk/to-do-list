@@ -8,6 +8,5 @@ def index(request: HttpRequest) -> HttpResponse:
     num_tasks = Task.objects.count()
 
     context = {"num_tasks": num_tasks}
-
-    return render(request, "index.html", context=context)
+    return render(request, "config/index.html", context=context)
 
