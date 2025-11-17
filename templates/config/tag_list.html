@@ -1,17 +1,37 @@
 {% extends "base.html" %}
 
 {% block content %}
-  <h1>Tags</h1>
+  <div class="d-flex justify-content-between align-items-center mb-4">
+    <h1>Tags</h1>
+    <a href="{% url 'config:tag-create' %}" class="btn btn-primary">Add</a>
+  </div>
+
   {% if tag_list %}
-    <table>
-      <tr>
-        <th>Name</th>
-      </tr>
-      {% for tag in tag_list %}
+    <table class="table table-striped">
+      <thead>
         <tr>
-          <td>{{ tag.name }}</td>
+          <th>Name</th>
+          <th class="text-center">Update</th>
+          <th class="text-center">Delete</th>
         </tr>
-      {% endfor %}
+      </thead>
+      <tbody>
+        {% for tag in tag_list %}
+          <tr>
+            <td>{{ tag.name }}</td>
+
+            <td class="text-center">
+              <a href="{% url 'config:tag-update' pk=tag.pk %}" class="btn btn-secondary btn-sm">Update</a>
+            </td>
+
+            <td class="text-center">
+              <a href="{% url 'config:tag-delete' pk=tag.pk %}" class="btn btn-danger btn-sm">Delete</a>
+            </td>
+          </tr>
+        {% endfor %}
+      </tbody>
     </table>
+  {% else %}
+    <p>There are no tags in the list.</p>
   {% endif %}
 {% endblock %}
