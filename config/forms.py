@@ -1,5 +1,9 @@
-def main():
-    pass
+from django import forms
 
-if __name__ == "__main__":
-    main()
+from config.models import Tag
+
+
+class TagForm(forms.ModelForm):
+    class Meta:
+        model = Tag
+        fields = ["name"]
