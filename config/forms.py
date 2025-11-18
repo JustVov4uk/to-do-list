@@ -6,7 +6,11 @@ from config.models import Tag, Task
 class TaskForm(forms.ModelForm):
     class Meta:
         model = Task
-        fields = "__all__"
+        fields = ["content", "deadline", "tags"]
+
+        widgets = {
+            "deadline": forms.DateTimeInput(attrs={"type": "datetime-local"}),
+        }
 
 
 class TagForm(forms.ModelForm):
