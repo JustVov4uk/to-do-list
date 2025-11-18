@@ -38,6 +38,12 @@ class TaskDeleteView(generic.DeleteView):
     success_url = reverse_lazy("config:index")
 
 
+class TaskToggleStatusView(generic.UpdateView):
+    model = Task
+    form_class = TaskForm
+    success_url = reverse_lazy("config:index")
+
+
 class TagListView(generic.ListView):
     model = Tag
     template_name = "config/tag_list.html"
