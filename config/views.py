@@ -7,13 +7,6 @@ from config.forms import TagForm, TaskForm
 from config.models import Task, Tag
 
 
-def index(request: HttpRequest) -> HttpResponse:
-    num_tasks = Task.objects.count()
-
-    context = {"num_tasks": num_tasks}
-    return render(request, "config/index.html", context=context)
-
-
 class TaskListView(generic.ListView):
     model = Task
     template_name = "config/index.html"

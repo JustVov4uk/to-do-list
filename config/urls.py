@@ -1,5 +1,5 @@
 from django.urls import path
-from config.views import (index, TaskListView,
+from config.views import (TaskListView,
                           TagListView, TagCreateView,
                           TagUpdateView, TagDeleteView,
                           TaskCreateView,
