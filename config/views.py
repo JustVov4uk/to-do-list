@@ -17,6 +17,7 @@ def index(request: HttpRequest) -> HttpResponse:
 class TaskListView(generic.ListView):
     model = Task
     template_name = "config/index.html"
+    paginate_by = 5
 
 
 class TaskCreateView(generic.CreateView):
@@ -47,7 +48,7 @@ class TaskToggleStatusView(generic.UpdateView):
 class TagListView(generic.ListView):
     model = Tag
     template_name = "config/tag_list.html"
-
+    paginate_by = 5
 
 class TagCreateView(generic.CreateView):
     model = Tag
