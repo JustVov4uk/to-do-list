@@ -12,6 +12,9 @@ class TaskListView(generic.ListView):
     template_name = "config/index.html"
     paginate_by = 5
 
+    def get_queryset(self):
+        return Task.objects.all().order_by("is_done", "-datetime")
+
 
 class TaskCreateView(generic.CreateView):
     model = Task
