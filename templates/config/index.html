@@ -23,7 +23,7 @@
           <p class="text-muted small mb-1">
             Created: {{ task.datetime|date:"F d, Y, g:i a" }}.
             {% if task.deadline %}
-              <span class="text-danger">Deadline: {{ task.deadline|date:"F d, Y, g:i a" }}.</span>
+              <span class="text-danger">Deadline: {{ task.deadline|date:"FF d, Y, g:i a" }}.</span>
             {% endif %}
           </p>
 
@@ -40,19 +40,17 @@
             <a href="{% url 'config:task-update' pk=task.pk %}" class="ml-3">Update</a>
             <a href="{% url 'config:task-delete' pk=task.pk %}" class="ml-2 text-danger">Delete</a>
           </p>
-
         </div>
 
         <div class="col-sm-2 text-right">
+          <form action="{% url 'config:task-toggle' pk=task.pk %}" method="post" style="display:inline;">
+            {% csrf_token %}
             {% if task.is_done %}
-              <a href="{% url 'config:task-toggle' pk=task.pk %}" class="btn btn-secondary btn-sm">
-                Undo
-              </a>
+              <button type="submit" class="btn btn-secondary btn-sm">Undo</button>
             {% else %}
-              <a href="{% url 'config:task-toggle' pk=task.pk %}" class="btn btn-success btn-sm">
-                Complete
-              </a>
+              <button type="submit" class="btn btn-success btn-sm">Complete</button>
             {% endif %}
+          </form>
         </div>
       </div>
       <hr>
