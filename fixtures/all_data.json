@@ -1,0 +1,137 @@
+[
+{
+    "model": "config.task",
+    "pk": 14,
+    "fields": {
+        "content": "Delivery piils",
+        "datetime": "2025-11-18T17:23:02.167Z",
+        "deadline": "2025-11-30T12:00:00Z",
+        "is_done": true,
+        "tags": [
+            4
+        ]
+    }
+},
+{
+    "model": "config.task",
+    "pk": 15,
+    "fields": {
+        "content": "Complete project.",
+        "datetime": "2025-11-18T17:43:52.963Z",
+        "deadline": "2025-11-29T12:00:00Z",
+        "is_done": false,
+        "tags": [
+            9
+        ]
+    }
+},
+{
+    "model": "config.task",
+    "pk": 16,
+    "fields": {
+        "content": "Buy products.",
+        "datetime": "2025-11-18T17:44:23.561Z",
+        "deadline": null,
+        "is_done": false,
+        "tags": [
+            8,
+            10
+        ]
+    }
+},
+{
+    "model": "config.task",
+    "pk": 17,
+    "fields": {
+        "content": "Clean flat.",
+        "datetime": "2025-11-19T15:44:53.523Z",
+        "deadline": "2025-11-20T12:00:00Z",
+        "is_done": false,
+        "tags": [
+            11
+        ]
+    }
+},
+{
+    "model": "config.task",
+    "pk": 18,
+    "fields": {
+        "content": "Write report.",
+        "datetime": "2025-11-19T15:47:43.193Z",
+        "deadline": "2025-11-25T10:00:00Z",
+        "is_done": true,
+        "tags": [
+            11
+        ]
+    }
+},
+{
+    "model": "config.task",
+    "pk": 19,
+    "fields": {
+        "content": "Walk the dog.",
+        "datetime": "2025-11-19T15:48:35.555Z",
+        "deadline": null,
+        "is_done": false,
+        "tags": [
+            11
+        ]
+    }
+},
+{
+    "model": "config.tag",
+    "pk": 4,
+    "fields": {
+        "name": "medicine"
+    }
+},
+{
+    "model": "config.tag",
+    "pk": 5,
+    "fields": {
+        "name": "logistics"
+    }
+},
+{
+    "model": "config.tag",
+    "pk": 6,
+    "fields": {
+        "name": "delivery"
+    }
+},
+{
+    "model": "config.tag",
+    "pk": 7,
+    "fields": {
+        "name": "transport"
+    }
+},
+{
+    "model": "config.tag",
+    "pk": 8,
+    "fields": {
+        "name": "products"
+    }
+},
+{
+    "model": "config.tag",
+    "pk": 9,
+    "fields": {
+        "name": "project"
+    }
+},
+{
+    "model": "config.tag",
+    "pk": 10,
+    "fields": {
+        "name": "shoping"
+    }
+},
+{
+    "model": "config.tag",
+    "pk": 11,
+    "fields": {
+        "name": "home"
+    }
+}
+]
